@@ -10,6 +10,7 @@ Coming soon
 ## Dataset
 NEU Steel Surface Defect Dataset
 1,800 images across 6 defect classes
+Defect classes: Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, Scratches
 
 ## Status
 In active development — started April 2026
