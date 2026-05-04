@@ -23,4 +23,4 @@ half the answer — a quality engineer needs to know what to do about it.
 Python | PyTorch | Claude API | Streamlit | Grad-CAM
 
 ## Status
-In active development — started April 26, 2026 — building baseline classifier
+In active development — started April 26, 2026 — baseline classifier training in progress
