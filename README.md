@@ -23,4 +23,4 @@ half the answer — a quality engineer needs to know what to do about it.
 Python | PyTorch | Claude API | Streamlit | Grad-CAM
 
 ## Status
-In active development — started April 26, 2026 — finalizing baseline classifier before moving to NEU steel dataset
+In active development — started April 26, 2026 — CIFAR-10 baseline complete, starting NEU steel dataset pipeline
