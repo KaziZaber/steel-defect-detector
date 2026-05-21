@@ -15,6 +15,14 @@ Upload a steel surface image. A fine-tuned ResNet18 model classifies the defect 
 NEU Steel Surface Defect Dataset — 1,800 images across 6 classes:
 Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, Scratches
 
+## Results
+
+| Model | Validation Accuracy |
+| Logistic Regression baseline | 43.6% |
+| ResNet18 transfer learning | In progress |
+
+Baseline classifier complete. ResNet18 transfer learning underway.
+
 ## Why Each Feature Exists
 Grad-CAM is there because blindly trusting a black box in industrial quality control is dangerous — engineers need to see what the model is looking at. The confidence rejection option exists for the same reason. The LLM layer exists because knowing the defect type is only 
 half the answer — a quality engineer needs to know what to do about it.
