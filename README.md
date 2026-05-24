@@ -18,7 +18,7 @@ Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, Scratches
 ## Results
 
 | Model | Validation Accuracy |
-| Logistic Regression baseline | 43.6% |
+| Logistic Regression baseline | 41.4% |
 | ResNet18 transfer learning | In progress |
 
 Baseline classifier complete. ResNet18 transfer learning underway.
