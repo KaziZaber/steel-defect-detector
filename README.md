@@ -19,9 +19,9 @@ Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, Scratches
 
 | Model | Validation Accuracy |
 | Logistic Regression baseline | 41.4% |
-| ResNet18 transfer learning | In progress |
+| ResNet18 transfer learning | 95.0% |
 
-Baseline classifier complete. ResNet18 transfer learning underway.
+Transfer learning demonstrates a 53.6 percentage point improvement over the logistic regression baseline — empirically justifying the use of pretrained convolutional feature detectors for steel defect classification.
 
 ## Why Each Feature Exists
 Grad-CAM is there because blindly trusting a black box in industrial quality control is dangerous — engineers need to see what the model is looking at. The confidence rejection option exists for the same reason. The LLM layer exists because knowing the defect type is only 
@@ -31,4 +31,4 @@ half the answer — a quality engineer needs to know what to do about it.
 Python | PyTorch | Claude API | Streamlit | Grad-CAM
 
 ## Status
-In active development — started April 26, 2026 — baseline classifier complete, ResNet18 transfer learning started
+In active development — started April 26, 2026 — ResNet18 training complete at 95.0% accuracy, adding Grad-CAM and LLM integration
