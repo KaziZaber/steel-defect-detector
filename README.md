@@ -31,4 +31,4 @@ half the answer — a quality engineer needs to know what to do about it.
 Python | PyTorch | Claude API | Streamlit | Grad-CAM
 
 ## Status
-In active development — started April 26, 2026 — ResNet18 training complete at 95.0% accuracy, adding Grad-CAM and LLM integration
+In active development — started April 26, 2026 — Grad-CAM explainability and confidence rejection complete, building LLM integration and Streamlit app
