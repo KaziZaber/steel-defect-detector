@@ -31,9 +31,19 @@ DEFECT_INFO = {
     'scratches': 'Linear surface marks running parallel to rolling direction. Caused by worn guide equipment.'
 }
 
+import gdown
+import os
+
 #@st.cache_resource makes this function only runs once, the model stays loaded in memory — no reloading on every upload
 @st.cache_resource
 def load_model():
+    if not os.path.exists('best_model.pth'):
+        #download from Google Drive on first run
+        gdown.download(
+            'https://drive.google.com/uc?id=1_fA1cHXrF-OQafws8HPNCE3gsb0zqHhm',
+            'best_model.pth',
+            quiet=False
+        )
     # load ResNet18 architecture, pretrained=False(have own weights)
     model = models.resnet18(pretrained=False)
     
