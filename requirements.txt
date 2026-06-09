@@ -3,6 +3,8 @@ torch
 torchvision
 anthropic
 grad-cam
+opencv-python-headless
 Pillow
 numpy
 gdown
+
