@@ -31,4 +31,4 @@ half the answer — a quality engineer needs to know what to do about it.
 Python | PyTorch | Claude API | Streamlit | Grad-CAM
 
 ## Status
-In active development — started April 26, 2026 — Streamlit app built and tested locally, deploying for live URL
+In active development — started April 26, 2026 — live Streamlit app deployed
