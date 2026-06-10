@@ -6,7 +6,7 @@ model made its decision.
 Built with POSCO's Pohang operations in mind — one of the largest steel mills in the world and a city where this kind of tool has real industrial relevance.
 
 ## Live Demo
-Coming soon — May 2026
+[🔬 Try the Live Demo](https://steel-defect-detector-m57ct4lq6jkouwkxmbjths.streamlit.app/)
 
 ## How It Works
 Upload a steel surface image. A fine-tuned ResNet18 model classifies the defect type and returns a confidence score. If confidence is below 70% the system flags it for manual inspection rather than guessing. For confident predictions, Grad-CAM highlights which part of the image drove the decision, and the Claude API generates a plain-English engineering analysis covering what the defect is, what likely caused it in the rolling process, and what the production team should do.
