@@ -34,7 +34,7 @@ DEFECT_INFO = {
 import gdown
 import os
 
-#@st.cache_resource makes this function only runs once, the model stays loaded in memory — no reloading on every upload
+#only runs once, model stays in memory after first load, no reloading on every upload
 @st.cache_resource
 def load_model():
     if not os.path.exists('best_model.pth'):
@@ -44,13 +44,13 @@ def load_model():
             'best_model.pth',
             quiet=False
         )
-    # load ResNet18 architecture, pretrained=False(have own weights)
+    #pretrained=False, using saved weights from training, not the default ImageNet ones)
     model = models.resnet18(pretrained=False)
     
     #get the number of input features(512) to the original final layer
     num_features = model.fc.in_features
     
-    #replace the original 1000-class final layer with 6-class layer
+    #swapping the original 1000-class ImageNet layer for a 6-class defect layer
     model.fc = nn.Sequential(
         nn.Dropout(0.3),          #30% dropout for regularization
         nn.Linear(num_features, 6) 
@@ -60,7 +60,7 @@ def load_model():
     #map_location='cpu' to make it work without a GPU, not to crash
     model.load_state_dict(torch.load('best_model.pth', map_location='cpu'))
     
-    #set to evaluation mode to disable dropout for consistent predictions
+    #evaluation mode turns dropout off, predictions stay consistent instead of varying each run
     model.eval()
     return model
 
@@ -101,7 +101,7 @@ Provide a concise professional engineering analysis in exactly 3 sentences:
 2. The most likely cause during the hot-rolling manufacturing process
 3. The recommended corrective action for the production team
 
-Be specific, technical, and practical. Write as a steel engineer would in an inspection report. Write in plain paragraph form only. No markdown, no bold, no headers, no bullet points. Just 3 plain sentences. Do not use first person."""
+Be specific, technical, and practical. Write as a steel engineer would in an inspection report. Write in plain paragraph form only. No markdown, no bold, no headers, no bullet points. Just 3 plain sentences. Do not use first person. Write in third person as an official engineering report."""
 
     message = client.messages.create(
         model="claude-opus-4-5",
@@ -113,7 +113,7 @@ Be specific, technical, and practical. Write as a steel engineer would in an ins
 #main app
 st.title("🔬 Steel Surface Defect Detector")
 st.markdown("**Industrial AI system for automated steel surface quality control**")
-st.markdown("Built with ResNet18 transfer learning — 95% validation accuracy on NEU Steel Surface Defect Dataset")
+st.markdown("Built with ResNet18 transfer learning — 95.8% validation accuracy on NEU Steel Surface Defect Dataset")
 
 st.divider()
 
@@ -143,9 +143,9 @@ with st.sidebar:
     
     st.divider()
     st.header("Model Performance")
-    st.metric("Validation Accuracy", "95.0%")
+    st.metric("Validation Accuracy", "95.8%")
     st.metric("Baseline (Logistic Reg.)", "41.4%")
-    st.metric("Improvement", "+53.6pp")
+    st.metric("Improvement", "+54.4pp")
 
 #main content
 col1, col2 = st.columns([1, 1])
