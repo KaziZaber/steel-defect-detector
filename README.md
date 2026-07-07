@@ -7,6 +7,7 @@ Built with POSCO's Pohang operations in mind — one of the largest steel mills 
 ## Live Demo
 
 [🔬 Try the Live Demo](https://steel-defect-detector-r2krsf2m5fvscfmzpetxa5.streamlit.app)
+
 [📊 Explore the Dataset](https://steel-defect-eda.streamlit.app/)
 
 ## How It Works
