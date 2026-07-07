@@ -124,7 +124,7 @@ with st.sidebar:
     This system uses computer vision and AI to detect surface defects on steel, 
     explain what caused them, and show exactly where on the image the model made its decision.
     
-    **Built for POSCO-relevant industrial AI research**
+    **Built for industrial quality control research**
     
     **Features:**
     - ResNet18 transfer learning classifier
