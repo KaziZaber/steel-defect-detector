@@ -10,6 +10,8 @@ Built with POSCO's Pohang operations in mind — one of the largest steel mills 
 
 [📊 Explore the Dataset](https://steel-defect-eda.streamlit.app/)
 
+![Live app in action](readme_screenshots/live_app_screenshot.png)
+
 ## How It Works
 
 Upload a steel surface image. A fine-tuned ResNet18 model classifies the defect type and returns a confidence score. If confidence is below 70% the system flags it for manual inspection rather than guessing. For confident predictions, Grad-CAM highlights which part of the image drove the decision, and the Claude API generates a plain-English engineering analysis covering what the defect is, what likely caused it in the rolling process, and what the production team should do.
