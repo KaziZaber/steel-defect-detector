@@ -144,7 +144,7 @@ def run_analysis(image):
         st.info(DEFECT_INFO[predicted_class])
 
 
-# ── main app ──────────────────────────────────────────────────────────────────
+#main app 
 
 st.title("🔬 Steel Surface Defect Detector")
 st.markdown("**Industrial AI system for automated steel surface quality control**")
@@ -180,7 +180,7 @@ with st.sidebar:
     st.metric("Baseline (Logistic Reg.)", "41.4%")
     st.metric("Improvement", "+54.4pp")
 
-# ── input section ─────────────────────────────────────────────────────────────
+#input section
 
 col1, col2 = st.columns([1, 1])
 
@@ -213,7 +213,7 @@ with col2:
             if st.button(label, key=f"sample_{key}", use_container_width=True):
                 sample_clicked = key
 
-# ── determine which image to use ─────────────────────────────────────────────
+#determine which image to use
 
 image = None
 
@@ -228,7 +228,7 @@ elif sample_clicked is not None:
     else:
         st.error(f"Sample image not found: {sample_path}")
 
-# ── run analysis or show landing page ────────────────────────────────────────
+#run analysis or show landing page
 
 if image is not None:
     with st.spinner("Analysing image..."):
